@@ -7,19 +7,25 @@ body {
 h2, h3 {
   text-align: center; }
 
+nav {
+  text-align: center;
+  display: block;
+}
+
 #quote-box {
   width: 550px;
   margin: 0 auto;
-  display: table;
+  display: block;
   margin-top: 8em;
   border-radius: 3px;
   background-color: white;
   padding: 25px 40px 40px 40px; }
 
 .quote {
-  text-align: center;
   color: #08566d;
+  margin-top: 1em;
   font-size: 1.5em;
+  text-align: center;
 }
 .speaker {
   text-align: right;
@@ -31,24 +37,29 @@ div.buttons {
   margin: auto; }
 
 button.btn.btn-primary {
-  float: right;
   border: none;
   color: white;
+  height: 50px;
   font-size: 1em;
   font-weight: 200;
   border-radius: 3px;
   padding: .75em 1.25em;
   margin: 20px 10px 0 10px;
   transition: background .25s;
-  background-color: #9fc178;
+  background-color: #eee;
   -webkit-transition: background .25s;
   /* Safari */ }
 
 button.btn.btn-primary:hover {
-  background-color: #1b511d; }
+  background-color: #ccc;
+}
 
 button.btn.btn-twitter {
-  float: left;
+  background-color: #eee;
+}
+
+button.btn.btn-twitter:hover {
+  background-color: #4099FF;
 }
 .hide {
   display: none; }
@@ -57,7 +68,11 @@ button.btn.btn-twitter {
   color: red; }
 
 img.icon {
-  height: 25px;
+  width: 20px;
+}
+
+.clearfix {
+  clear: both;
 }
 
 /*# sourceMappingURL=styles.css.map */
