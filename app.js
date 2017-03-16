@@ -19,7 +19,7 @@ require(['lib/modules/template' ,'lib/modules/quotes'], function(template) {
         if ((currentQuote.text.length + currentQuote.name.length) > 140) {
           var namelen = currentQuote.name.length;
           var qslen = 134 - namelen;
-          qs = currentQuote.text.substring(0, qslen) + "... - " + name;
+          qs = currentQuote.text.substring(0, qslen) + "... - " + currentQuote.name;
         }
 
         currentQuote.link = "https://twitter.com/intent/tweet?text=" + encodeURIComponent(qs);
