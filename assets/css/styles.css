@@ -75,8 +75,12 @@ button.btn.btn-twitter:hover { background-color: #4099FF; }
   #quote-box {
     width: 100%;
     margin-top: 0;
-    border-top: 5px solid #eee;
     font-size: 1em;
     border-radius: 0;
+    border-top: 5px solid #ccc;
+    background: rgba(255,255,255,.75);
+  }
+  button.btn.btn-primary {
+    background-color: #ccc;
   }
 }
