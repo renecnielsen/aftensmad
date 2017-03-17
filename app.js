@@ -6,10 +6,18 @@ require.config({
 });
 
 require(['lib/modules/template' ,'lib/modules/quotes'], function(template) {
+    var idx = 0;
+    var lastQuote;
+
     var getQuote = function() {
-        var currentQuote = {};
-        var idx = Math.floor(Math.random() * quotes.length);
+        var getNewIdx = function() { return Math.floor(Math.random() * quotes.length); }
+
+        idx = getNewIdx();
+        if (idx === lastQuote) getQuote();
+        lastQuote = idx;
+
         var quote = quotes[idx];
+        var currentQuote = {};
 
         currentQuote.name = quote.name;
         currentQuote.text = quote.text;
