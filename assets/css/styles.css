@@ -1,6 +1,5 @@
 body {
   font-family: Raleway, sans-serif;
-  background-image: url('../../assets/img/bg1.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -8,7 +7,8 @@ body {
 }
 
 h2, h3 {
-  text-align: center; }
+  text-align: center;
+}
 
 nav {
   text-align: center;
@@ -22,7 +22,8 @@ nav {
   margin-top: 8em;
   border-radius: 3px;
   background-color: white;
-  padding: 25px 40px 40px 40px; }
+  padding: 25px 40px 40px 40px;
+}
 
 .quote {
   color: #08566d;
@@ -37,7 +38,8 @@ nav {
 
 div.buttons {
   display: block;
-  margin: auto; }
+  margin: auto;
+}
 
 button.btn.btn-primary {
   border: none;
@@ -51,32 +53,16 @@ button.btn.btn-primary {
   transition: background .25s;
   background-color: #eee;
   -webkit-transition: background .25s;
-  /* Safari */ }
-
-button.btn.btn-primary:hover {
-  background-color: #ccc;
 }
 
-button.btn.btn-twitter {
-  background-color: #eee;
-}
+button.btn.btn-primary:hover { background-color: #ccc; }
+button.btn.btn-twitter { background-color: #eee; }
+button.btn.btn-twitter:hover { background-color: #4099FF; }
 
-button.btn.btn-twitter:hover {
-  background-color: #4099FF;
-}
-.hide {
-  display: none; }
-
-.red {
-  color: red; }
-
-img.icon {
-  width: 20px;
-}
-
-.clearfix {
-  clear: both;
-}
+.hide { display: none; }
+.red { color: red; }
+.icon { width: 20px; }
+.clearfix { clear: both; }
 
 @media (max-width: 600px) {
   .container {

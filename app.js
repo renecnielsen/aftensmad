@@ -12,7 +12,7 @@ require(['lib/modules/template' ,'lib/modules/quotes'], function(template) {
     var getQuote = function() {
         var getNewIdx = function() { return Math.floor(Math.random() * quotes.length); }
 
-        idx = getNewIdx();
+        var idx = getNewIdx();
         if (idx === lastQuote) getQuote();
         lastQuote = idx;
 
