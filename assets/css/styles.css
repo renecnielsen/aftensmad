@@ -1,5 +1,5 @@
 body {
-  font-family: Raleway, sans-serif;
+  font-family: 'PT Sans', sans-serif;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -20,20 +20,33 @@ nav {
   margin: 0 auto;
   display: block;
   margin-top: 8em;
-  border-radius: 3px;
+  border-radius: 12px;
   background-color: white;
   padding: 25px 40px 40px 40px;
 }
 
-.quote {
-  color: #08566d;
+.what-about{
+    color: #08566d;
   margin-top: 1em;
   font-size: 1.5em;
   text-align: center;
 }
-.speaker {
-  text-align: right;
-  font-size: 1.15em;
+
+.quote {
+  color: #08566d;
+  font-size: 1.5em;
+  text-align: center;
+  font-weight:bold;
+}
+
+.link{
+  color:grey;
+  font-size:0.85em;
+  text-align:center;
+}
+
+.link a{
+  color:grey;
 }
 
 div.buttons {

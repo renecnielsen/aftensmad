@@ -1,11 +1,11 @@
 <html>
     <head>
         <title>
-            Random Quote Machine
+            Hvad skal vi spise?
         </title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="lib/require.js" data-main="app"></script>
-        <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css"/>
         <link rel="stylesheet" type="text/css" href="assets/css/styles.css"/>
     </head>
@@ -14,11 +14,12 @@
             <blockquote id="quote-box">
                 <nav>
                     <button class="btn btn-primary" id="new-quote"><span class="glyphicon glyphicon-refresh" aria-hidden="true"></span></button>
-                    <button class="btn btn-primary btn-twitter" id="tweet-link"><a data-href=""><img class="icon" src="assets/img/twitter.png" alt="Twitter Share Icon"/></a></button>
+                    <!-- <button class="btn btn-primary btn-twitter" id="tweet-link"><a data-href=""><img class="icon" src="assets/img/twitter.png" alt="Twitter Share Icon"/></a></button> -->
                 </nav>
                 <div class="clearfix"></div>
+                <p class="what-about">Skat, hvad med om vi spiste...</p>
                 <p class="quote"></p>
-                <footer class="speaker"></footer>
+                <div class="link">Pssst! Der er opskrift ovre p&aring; <a href="" id="recipe" class="recipe"></a></div>
             </blockquote>
         </section>
     </body>

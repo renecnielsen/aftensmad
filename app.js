@@ -20,6 +20,7 @@ require(['lib/modules/template' ,'lib/modules/quotes'], function(template) {
         var currentQuote = {};
 
         currentQuote.name = quote.name;
+        currentQuote.url = quote.url;
         currentQuote.text = quote.text;
 
         var qs = currentQuote.text + " - " + currentQuote.name;
