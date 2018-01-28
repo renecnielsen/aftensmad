@@ -1,3 +1,3 @@
-# FreeCodeCamp Random Quote Generator
+# Skat, hvad skal vi sætte på madplanen?
 
-A small app to generate random quotes from famous painters and display a painting of theirs in the background.
+Verdens simpleste madplanshjælper. Prøv den her: http://aftensmad.xyz
