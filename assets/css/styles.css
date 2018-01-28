@@ -1,99 +1,244 @@
+@import url(http://fonts.googleapis.com/css?family=Archivo+Black:200,400,900);
+
 body {
-  font-family: 'PT Sans', sans-serif;
+
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
   background-repeat: no-repeat;
 }
 
-h2, h3 {
+*, *:after, *:before { box-sizing: border-box; }
+.clearfix:before, .clearfix:after {display: table;  content: ''; }
+.clearfix:after { clear: both; }
+
+a {
+  outline: none;
+  color: #dd3e62;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #1e1a1b;
+}
+
+ a:focus {
+  outline: none;
+ }
+
+.hidden {
+  height: 0;
+  width: 0;
+  overflow: hidden;
+  position: absolute;
+}
+
+
+/* Grid */
+.grid__item {
+  height: calc(100vh - 40px);
+  min-height: 460px;
+  max-width: calc(100vw - 40px);
+  background-color:rgba(36,41,46,0.5);
+  margin: 20px;
+  padding: 100px 0;
+  z-index: 1;
+  position: relative;
   text-align: center;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-transform: translate3d(0,0,0); /* Solves Safari bug because of SVG clipping mask */
 }
 
-nav {
-  text-align: center;
-  display: block;
-}
-
-#quote-box {
-  width: 550px;
-  margin: 0 auto;
-  display: block;
-  margin-top: 8em;
-  border-radius: 12px;
-  background-color: white;
-  padding: 25px 40px 40px 40px;
-}
-
-.what-about{
-    color: #08566d;
-  margin-top: 1em;
+.grid__item p {
   font-size: 1.5em;
-  text-align: center;
+  font-weight: bold;
+  color: #777;
 }
 
-.quote {
-  color: #08566d;
-  font-size: 1.5em;
-  text-align: center;
-  font-weight:bold;
-}
+@media screen and (max-width: 50em) {
 
-.link{
-  color:grey;
-  font-size:0.85em;
-  text-align:center;
-}
-
-.link a{
-  color:grey;
-}
-
-div.buttons {
-  display: block;
-  margin: auto;
-}
-
-button.btn.btn-primary {
-  border: none;
-  color: white;
-  height: 50px;
-  font-size: 1em;
-  font-weight: 200;
-  border-radius: 3px;
-  padding: .75em 1.25em;
-  margin: 20px 10px 0 10px;
-  transition: background .25s;
-  background-color: #eee;
-  -webkit-transition: background .25s;
-}
-
-button.btn.btn-primary:hover { background-color: #ccc; }
-button.btn.btn-twitter { background-color: #eee; }
-button.btn.btn-twitter:hover { background-color: #4099FF; }
-
-.hide { display: none; }
-.red { color: red; }
-.icon { width: 20px; }
-.clearfix { clear: both; }
-
-@media (max-width: 600px) {
-  .container {
-    padding: 0;
-    margin: 0;
-  }
-  blockquote {
-    border: 0;
-  }
-  #quote-box {
+  .grid__item {
     width: 100%;
-    margin-top: 0;
-    font-size: 1em;
-    border-radius: 0;
-    border-top: 5px solid #ccc;
-    background: rgba(255,255,255,.75);
-  }
-  button.btn.btn-primary {
-    background-color: #ccc;
   }
 }
+
+/* General link styles */
+.link {
+  outline: none;
+  text-decoration: none;
+  position: relative;
+  font-size: 8em;
+  line-height: 1;
+  color: white;
+  display: inline-block;
+}
+
+
+/* Takiri */
+.link--takiri {
+  display:block;
+  font-family: 'Archivo Black', serif;
+  font-weight: 900;
+  font-size: 9em;
+  padding: 0 10px 20px;
+  -webkit-transition: color 0.5s;
+  transition: color 0.5s;
+}
+
+.link--takiri:hover {
+  color: #e53369;
+}
+
+.link--takiri::before {
+  content: '';
+  position: absolute;
+  height: 36px;
+  width: 120%;
+  top: 50%;
+  margin-top: -18px;
+  left: -10%;
+  z-index: -1;
+  background: rgba(39, 40, 34, 0.50);
+  -webkit-transform: rotate3d(0,0,1,10deg) scale3d(0,5,5);
+  transform: rotate3d(0,0,1,10deg) scale3d(0,5,5);
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+}
+
+.link--takiri:hover::before {
+  -webkit-transform: rotate3d(0,0,3,10deg) scale3d(1,5,5);
+  transform: rotate3d(0,0,1,10deg) scale3d(1,5,5);
+}
+
+.link--takiri .meta {
+  font-size: 20%;
+  font-weight: 400;
+  position: absolute;
+  right: 15px;
+  color: white;
+  bottom: 0;
+  opacity: 0;
+  -webkit-transform: translate3d(-40px,-10px,0);
+  transform: translate3d(-40px,-10px,0);
+  -webkit-transition: -webkit-transform 0.5s, opacity 0.5s;
+  transition: transform 0.5s, opacity 0.5s;
+}
+
+.link--takiri:hover .meta {
+  opacity: 1;
+  -webkit-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+}
+
+
+/* Media Queries */
+@media screen and (max-width: 42em) {
+  .link--takiri { font-size: 3.5em; }
+}
+
+
+button {
+  overflow: visible;
+  border: 0;
+  padding: 0;
+  margin: 1.8rem;
+}
+.btn.striped-shadow span {
+  display: block;
+  position: relative;
+  z-index: 2;
+  border: 5px solid;
+}
+.btn.striped-shadow.white span {
+  border-color: #fff;
+  color: #000;
+  background: #fff;
+}
+
+.btn {
+  font-family: 'Archivo Black', sans-serif;
+  height: 80px;
+  line-height: 65px;
+  display: inline-block;
+  letter-spacing: 1px;
+  position: absolute;
+  top:10px;
+  font-size: 1.35rem;
+  transition: opacity .3s, z-index .3s step-end, -webkit-transform .3s;
+  transition: opacity .3s, z-index .3s step-end, transform .3s;
+  transition: opacity .3s,
+    z-index .3s step-end,
+    transform .3s,
+    -webkit-transform .3s;
+  z-index: 1;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.btn {
+  width: 155px;
+  height: 48px;
+  line-height: 38px;
+}
+
+button.btn.striped-shadow.white:after, button.btn.striped-shadow.white:before {
+  background-image: linear-gradient(
+    135deg,
+    transparent 0,
+    transparent 5px,
+    #fff 5px,
+    #fff 10px,
+    transparent 10px
+  );
+}
+
+button.btn.striped-shadow:hover:before {
+  max-height: calc(100% - 10px);
+}
+
+button.btn.striped-shadow:after {
+  width: calc(100% - 4px);
+  height: 8px;
+  left: -10px;
+  bottom: -9px;
+  background-size: 15px 8px;
+  background-repeat: repeat-x;
+}
+button.btn.striped-shadow:after, button.btn.striped-shadow:before {
+  content: '';
+  display: block;
+  position: absolute;
+  z-index: 1;
+  transition: max-height .3s, width .3s, -webkit-transform .3s;
+  transition: transform .3s, max-height .3s, width .3s;
+  transition: transform .3s, max-height .3s, width .3s, -webkit-transform .3s;
+}
+
+.btn.striped-shadow:hover {
+  -webkit-transform: translate(-12px, 12px);
+  -ms-transform: translate(-12px, 12px);
+  transform: translate(-12px, 12px);
+  z-index: 3;
+}
+
+button.btn.striped-shadow:hover:after, button.btn.striped-shadow:hover:before {
+  -webkit-transform: translate(12px, -12px);
+  -ms-transform: translate(12px, -12px);
+  transform: translate(12px, -12px);
+}
+button.btn.striped-shadow:before {
+  width: 8px;
+  max-height: calc(100% - 5px);
+  height: 100%;
+  left: -12px;
+  bottom: -5px;
+  background-size: 8px 15px;
+  background-repeat: repeat-y;
+  background-position: 0 100%;
+}
+

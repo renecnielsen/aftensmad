@@ -1,26 +1,46 @@
-<html>
-    <head>
-        <title>
-            Hvad skal vi spise?
-        </title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src="lib/require.js" data-main="app"></script>
-        <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css"/>
-        <link rel="stylesheet" type="text/css" href="assets/css/styles.css"/>
-    </head>
-    <body>
-        <section class="container">
-            <blockquote id="quote-box">
-                <nav>
-                    <button class="btn btn-primary" id="new-quote"><span class="glyphicon glyphicon-refresh" aria-hidden="true"></span></button>
-                    <!-- <button class="btn btn-primary btn-twitter" id="tweet-link"><a data-href=""><img class="icon" src="assets/img/twitter.png" alt="Twitter Share Icon"/></a></button> -->
-                </nav>
-                <div class="clearfix"></div>
-                <p class="what-about">Skat, hvad med om vi spiste...</p>
-                <p class="quote"></p>
-                <div class="link">Pssst! Der er opskrift ovre p&aring; <a href="" id="recipe" class="recipe"></a></div>
-            </blockquote>
-        </section>
-    </body>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Skat, hvad skal vi sætte på madplanen?</title>
+    <meta name="description" content="En samling no-bullshit opskrifter lige til at smide på madplanen" />
+    <meta name="author" content="Jacob Boetter" />
+    <link rel="stylesheet" type="text/css" href="assets/css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/styles.css"/>
+    <script src="lib/require.js" data-main="app"></script>
+    <!--[if IE]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    
+</head>
+
+<body>
+    
+    <div class="container">
+
+        <div class="grid">
+
+            <div class="grid__item">
+                <button class="btn striped-shadow white" id="new-quote"><span>Mere!</span></button>
+                <a href="" id="linkout" class="link link--takiri"><span class="quote">Suppe</span> <span class="meta"><span class="recipe">Arla</span> har en opskrift</span></a>
+            </div>
+
+            
+        
+        </div>
+
+    </div>
+
+
+
+
+</body>
+
 </html>
+
+
+
+
