@@ -81,16 +81,16 @@ a:hover {
 /* Takiri */
 .link--takiri {
   display:block;
-  font-family: 'Archivo Black', serif;
+  font-family: 'Playfair Display', serif;
   font-weight: 900;
-  font-size: 9em;
+  font-size: 7em;
   padding: 0 10px 20px;
   -webkit-transition: color 0.5s;
   transition: color 0.5s;
 }
 
 .link--takiri:hover {
-  color: #e53369;
+  color: #17bebb;
 }
 
 .link--takiri::before {
@@ -116,6 +116,7 @@ a:hover {
 
 .link--takiri .meta {
   font-size: 20%;
+  font-family: 'Lora', sans-serif;
   font-weight: 400;
   position: absolute;
   right: 15px;
@@ -160,14 +161,14 @@ button {
 }
 
 .btn {
-  font-family: 'Archivo Black', sans-serif;
+  font-family: 'Playfair Display', sans-serif;
   height: 80px;
   line-height: 65px;
   display: inline-block;
   letter-spacing: 1px;
   position: absolute;
   top:10px;
-  font-size: 1.35rem;
+  font-size: 1.5rem;
   transition: opacity .3s, z-index .3s step-end, -webkit-transform .3s;
   transition: opacity .3s, z-index .3s step-end, transform .3s;
   transition: opacity .3s,
@@ -240,4 +241,3 @@ button.btn.striped-shadow:before {
   background-repeat: repeat-y;
   background-position: 0 100%;
 }
-
